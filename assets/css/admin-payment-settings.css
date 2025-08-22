@@ -1,0 +1,388 @@
+/**
+ * Monoova Payment Settings Styles - Stripe-like Layout
+ */
+
+/* Tab Panel Styles */
+.monoova-settings-tabs .components-tab-panel__tabs {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 24px;
+}
+
+.monoova-settings-tabs .components-tab-panel__tabs-item {
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+    font-weight: 500;
+    color: #555;
+    padding: 12px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.monoova-settings-tabs .components-tab-panel__tabs-item:hover {
+    color: #0073aa;
+}
+
+.monoova-settings-tabs .components-tab-panel__tabs-item.is-active {
+    color: #0073aa;
+    border-bottom-color: #0073aa;
+    background: none;
+}
+
+/* Payment Method Option Styles */
+.monoova-payment-method-option {
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: none;
+}
+
+.monoova-payment-method-option:last-child {
+    border-bottom: none;
+}
+
+.monoova-payment-method-option:hover {
+    background-color: transparent;
+}
+
+.monoova-payment-icons {
+    align-items: center;
+}
+
+.monoova-payment-icons img {
+    height: 16px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Field Styles */
+.monoova-form-field {
+    margin-bottom: 0;
+}
+
+.monoova-form-field .components-base-control__field {
+    margin-bottom: 0;
+}
+
+.monoova-form-field .components-select-control {
+    border-radius: 8px !important;
+}
+
+.monoova-form-field .components-input-control__container .components-input-control__backdrop {
+    border: none !important;
+}
+
+.monoova-form-field .components-text-control__input,
+.monoova-form-field .components-textarea-control__input,
+.monoova-form-field .components-select-control__input {
+    font-size: 14px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 10px 12px;
+    width: 100%;
+    min-height: 45px !important;
+    line-height: 1.5 !important;
+    color: #374151 !important;
+}
+
+.monoova-form-field .components-text-control__input:focus,
+.monoova-form-field .components-textarea-control__input:focus,
+.monoova-form-field .components-select-control__input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+.monoova-form-field .components-text-control__input::placeholder,
+.monoova-form-field .components-textarea-control__input::placeholder {
+    color: #9ca3af;
+}
+
+/* Panel Row Styles */
+.components-panel__row {
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+}
+
+/* Form Toggle Styles */
+.components-form-toggle {
+    margin: 0;
+}
+
+.components-form-toggle.is-checked .components-form-toggle__track {
+    background-color: #2563eb;
+}
+
+.components-form-toggle__thumb {
+    background-color: #fff;
+}
+
+/* Card Styles */
+.components-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.components-card .components-card__body {
+    padding: 24px;
+}
+
+/* Grid Layout */
+.components-grid {
+    align-items: start;
+    gap: 24px;
+}
+
+/* VStack and HStack improvements */
+.components-v-stack > * + * {
+    margin-top: 0;
+}
+
+.components-h-stack > * + * {
+    margin-left: 0;
+}
+
+/* Settings Section Styles */
+.monoova-settings-section {
+    margin-bottom: 0;
+}
+
+.monoova-settings-section .components-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.monoova-settings-section .components-text[data-size="14"] {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Text and Heading Styles */
+.components-text {
+    margin: 0;
+}
+
+.components-heading {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+/* Checkbox Control in PanelRow */
+.components-panel__row .components-checkbox-control {
+    margin: 0;
+}
+
+.components-panel__row .components-checkbox-control .components-checkbox-control__input {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Notice Styles */
+.components-notice {
+    margin-bottom: 20px;
+}
+
+.monoova-save-notice {
+    margin-bottom: 24px;
+}
+
+/* NumberControl with suffix */
+.components-number-control {
+    max-width: 120px;
+}
+
+.components-number-control .components-input-control__input {
+    text-align: right;
+    padding-right: 24px;
+}
+
+/* Divider Styles */
+.wp-components-divider {
+    border-top: 1px solid #e5e7eb;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    .components-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+    
+    .monoova-payment-settings {
+        margin: 0 16px;
+    }
+    
+    .components-card .components-card__body {
+        padding: 16px;
+    }
+}
+
+/* Form Field Spacing in Cards */
+.components-card .monoova-form-field:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Flex improvements */
+.components-flex {
+    align-items: flex-start;
+}
+
+.components-flex.is-align-center {
+    align-items: center;
+}
+
+.components-flex-item {
+    flex-shrink: 0;
+}
+
+.components-flex-block {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* Improved spacing for PanelRows */
+.components-panel__row:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+/* Better form control styling */
+.components-base-control .components-base-control__label {
+    font-weight: 500;
+    color: #1e1e1e;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Static details card styling */
+.components-card[style*="background-color: rgb(246, 247, 247)"] {
+    background-color: #f9fafb !important;
+    border: 1px solid #e5e7eb;
+}
+
+/* Payment method option spacing */
+.monoova-payment-method-option .components-flex {
+    min-height: 48px;
+}
+
+/* Loading state */
+.monoova-save-section .components-button.is-busy {
+    opacity: 0.7;
+}
+
+/* Save section styling */
+.monoova-save-section {
+    border-top: 1px solid #e5e7eb;
+    margin-top: 24px;
+    background: #f9fafb;
+}
+
+.monoova-save-section .components-card__body {
+    padding: 20px 24px;
+}
+
+/* Link button styling */
+.components-button.is-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
+    height: auto;
+    min-height: auto;
+}
+
+.components-button.is-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.components-button.is-link:focus {
+    color: #1d4ed8;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    border-radius: 2px;
+}
+
+/* Account status section styling (if needed for settings tab) */
+.monoova-account-status {
+    background: #f0f9ff;
+    border: 1px solid #0ea5e9;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.monoova-account-status .components-text {
+    color: #0c4a6e;
+}
+
+/* Webhook status chip styles */
+.monoova-webhook-status-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 70px;
+    justify-content: center;
+}
+
+.monoova-webhook-status-chip.active {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.monoova-webhook-status-chip.inactive {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #d1d5db;
+}
+
+/* Webhook connect button when disabled (connected state) */
+.monoova-settings-section .components-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.monoova-settings-section .components-button:disabled:hover {
+    background-color: inherit;
+    border-color: inherit;
+}
+
+/* Notice improvements */
+.components-notice.is-warning {
+    background-color: #fffbeb;
+    border-left-color: #f59e0b;
+    color: #92400e;
+}
+
+.components-notice.is-success {
+    background-color: #f0f9f4;
+    border-left-color: #10b981;
+    color: #065f46;
+}
+
+.components-notice.is-error {
+    background-color: #fef2f2;
+    border-left-color: #ef4444;
+    color: #991b1b;
+}
+
+.woocommerce table.form-table input.regular-input, .woocommerce table.form-table input[type=date], .woocommerce table.form-table input[type=datetime-local], .woocommerce table.form-table input[type=datetime], .woocommerce table.form-table input[type=email], .woocommerce table.form-table input[type=number], .woocommerce table.form-table input[type=password], .woocommerce table.form-table input[type=tel], .woocommerce table.form-table input[type=text], .woocommerce table.form-table input[type=time], .woocommerce table.form-table input[type=url], .woocommerce table.form-table input[type=week], .woocommerce table.form-table textarea {
+    width: 100% !important;
+}
+
+/* Remove any remaining transition effects */
+* {
+    transition: none !important;
+}

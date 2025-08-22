@@ -1,0 +1,775 @@
+/**
+ * Monoova Payments for WooCommerce - Frontend Styles
+ */
+
+/* Card Element Container */
+#monoova-card-element {
+    margin-bottom: 1.5em;
+}
+
+.monoova-card-fields-container {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+
+/* Card Element Styles */
+#monoova-card-element-container {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+#monoova-card-element-container:focus-within {
+    border-color: #999;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+#monoova-card-element-container.StripeElement--focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Card Fields */
+.monoova-card-field {
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    height: 40px;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.monoova-card-field.focused {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.monoova-card-field.valid {
+    border-color: #28a745;
+}
+
+.monoova-card-field.invalid {
+    border-color: #dc3545;
+}
+
+/* Error Messages */
+#monoova-card-errors {
+    color: #e25950;
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+/* Save Card Option */
+.monoova-save-card-option {
+    margin-top: 15px;
+    margin-bottom: 16px;
+}
+
+/* Wallet Button Container */
+#monoova-wallet-buttons-container {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Wallet Buttons Divider */
+.monoova-wallet-divider {
+    position: relative;
+    margin: 20px 0;
+    text-align: center;
+    color: #777;
+}
+
+.monoova-wallet-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    z-index: 0;
+}
+
+.monoova-wallet-divider span {
+    background-color: #fff;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+    color: #6d6d6d;
+    font-size: 0.9em;
+}
+
+.monoova-wallet-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.monoova-wallet-button {
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Apple Pay button container */
+#monoova-apple-pay-button {
+    -webkit-appearance: -apple-pay-button;
+    -apple-pay-button-style: black;
+    -apple-pay-button-type: plain;
+}
+
+/* Google Pay button container */
+#monoova-google-pay-button {
+    background-color: black;
+    background-origin: content-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0px;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+    min-height: 48px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* PayID Element */
+#monoova-payid-element {
+    margin-bottom: 1.5em;
+}
+
+.monoova-payid-type-selector {
+    margin-top: 15px;
+}
+
+/* Checkout Loading State */
+.monoova-processing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: #3c434a;
+}
+
+.monoova-processing:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: monoova-spinner 0.8s linear infinite;
+}
+
+@keyframes monoova-spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Payment Instructions */
+.monoova-payment-instructions {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin: 20px 0;
+}
+
+.monoova-payment-details {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.monoova-payment-details li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.monoova-payment-details li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.monoova-reference {
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.monoova-reference-note {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fffbcc;
+    border: 1px solid #e6db55;
+    border-radius: 3px;
+}
+
+.monoova-copy-button {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 2px 8px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    font-size: 12px;
+    text-decoration: none !important;
+    color: #333 !important;
+}
+
+.monoova-copy-button:hover {
+    background: #e6e6e6;
+}
+
+.monoova-expiry-info.monoova-expired {
+    color: #e01e5a;
+    font-weight: bold;
+}
+
+/* Credit Card Icons */
+.payment_method_monoova_card img {
+    max-height: 24px;
+    margin: 0 3px;
+}
+
+/* Payment Method Selection */
+.wc_payment_method.payment_method_monoova_card .payment_box {
+    padding-top: 10px;
+}
+
+.wc_payment_method.payment_method_monoova_payid .monoova-payment-notice {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #2271b1;
+    margin-bottom: 10px;
+}
+
+/* Order Details */
+.woocommerce-order-overview__monoova-details {
+    margin-top: 20px !important;
+}
+
+/* Saved Payment Methods */
+.woocommerce-SavedPaymentMethods-tokenInput {
+    margin-right: 5px !important;
+}
+
+.woocommerce-SavedPaymentMethods-token {
+    margin-bottom: 10px;
+}
+
+.woocommerce-SavedPaymentMethods-methods {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.woocommerce-SavedPaymentMethods-methods label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.woocommerce-SavedPaymentMethods-methods input[type="radio"] {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.woocommerce-SavedPaymentMethods-methods img {
+    max-height: 24px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #monoova-wallet-buttons-container {
+        flex-direction: column;
+    }
+    
+    .monoova-apple-pay-button,
+    .monoova-google-pay-button {
+        max-width: 100%;
+    }
+
+    .monoova-wallet-divider::before,
+    .monoova-wallet-divider::after {
+        width: calc(50% - 15px);
+    }
+
+    .monoova-wallet-buttons {
+        gap: 8px;
+    }
+    
+    .monoova-wallet-button {
+        height: 40px;
+    }
+}
+
+/* Thank you page styling for payment details */
+.woocommerce-order-received .monoova-payment-instructions {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Test mode notice */
+.monoova-test-mode-notice {
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    color: #8a6d3b;
+    font-size: 0.9em;
+}
+
+/* Payment Method Options */
+.monoova-payment-methods {
+    margin: 15px 0;
+}
+
+.monoova-payment-method-option {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.monoova-payment-method-option .payment-method-label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.monoova-payment-method-option .payment-method-label img {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.monoova-payment-method-option input[type="radio"]:checked + .payment-method-label {
+    border-color: #2ab5c4;
+    background: #f8f9fa;
+    box-shadow: 0 0 0 1px #2ab5c4;
+}
+
+.monoova-payment-method-option:hover .payment-method-label {
+    border-color: #2ab5c4;
+}
+
+/* Primer Checkout Container */
+.checkout-container {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+
+/* Express Checkout Styles */
+/* .wc-block-components-express-payment {
+    margin-bottom: 20px;
+}
+
+.wc-block-components-express-payment__content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+} */
+
+.monoova-express-checkout-button {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    background-color: #2271b1;
+    color: #fff;
+    min-height: 48px;
+}
+
+.monoova-express-checkout-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.monoova-express-checkout-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.monoova-express-checkout-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.monoova-express-checkout-button.secondary {
+    background-color: #000;
+}
+
+.monoova-express-checkout-button .monoova-logo {
+    height: 20px;
+    width: auto;
+}
+
+.monoova-express-checkout-processing {
+    position: relative;
+    overflow: hidden;
+}
+
+.monoova-express-checkout-processing::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Express Checkout in Block Editor */
+
+/* Express Checkout Loading State */
+.monoova-express-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.monoova-express-loading::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 2px solid #e1e1e1;
+    border-top: 2px solid #2271b1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Express Checkout Styles */
+
+
+.monoova-express-checkout-button {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    background-color: #2271b1;
+    color: #fff;
+    min-height: 48px;
+}
+
+.monoova-express-checkout-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.monoova-express-checkout-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.monoova-express-checkout-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.monoova-express-checkout-button.secondary {
+    background-color: #000;
+}
+
+.monoova-express-checkout-button .monoova-logo {
+    height: 20px;
+    width: auto;
+}
+
+.monoova-express-checkout-processing {
+    position: relative;
+    overflow: hidden;
+}
+
+.monoova-express-checkout-processing::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/**
+ * PayTo Specific Styles
+ */
+
+/* PayTo Payment Method Selection */
+.payto-payment-method-selection {
+    display: flex;
+    align-items: center;
+}
+
+.payto-payment-method-selection label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+}
+
+.payto-payment-method-selection input[type="radio"] {
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+.payto-payment-method-selection > div label {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* PayTo Fields Group */
+.payto-fields-group {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+}
+
+.payto-fields-group h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* PayTo Form Fields */
+.payto-fields-group .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.payto-fields-group .form-row > div {
+    flex: 1;
+}
+
+.payto-fields-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.payto-fields-group input[type="text"],
+.payto-fields-group input[type="tel"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.payto-fields-group input[type="text"]:focus,
+.payto-fields-group input[type="tel"]:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.payto-fields-group input.error {
+    border-color: #e74c3c;
+}
+
+/* PayTo Error Messages */
+.payto-error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* PayTo Maximum Amount Field */
+.payto-maximum-amount-field {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.payto-maximum-amount-field h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.payto-maximum-amount-field input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.payto-maximum-amount-field input[type="number"]:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.payto-maximum-amount-field .form-text {
+    color: #666;
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* PayTo Info Box */
+.payto-info-box {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e7f3ff;
+    border-radius: 3px;
+    font-size: 14px;
+    border-left: 4px solid #007cba;
+}
+
+.payto-info-box strong {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payto-info-box p {
+    margin: 5px 0 0 0;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* PayTo Logo in Label */
+.wc-block-components-payment-method-label img {
+    height: 24px;
+    width: auto;
+}
+
+.monoova-payto-instructions-wrapper .components-text-control__input {
+    border: 1px solid #d1d5db !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    min-height: 46px !important;
+    line-height: 1.5 !important;
+    padding: 10px !important;
+}
+
+.monoova-payto-instructions-wrapper .components-text-control__input:focus {
+    border-color: #2CB5C5 !important;
+}
+
+.monoova-payto-instructions-wrapper .components-text-control__input::placeholder {
+    color: #aeb3bb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .payto-fields-group .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .payto-payment-method-selection > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .payto-payment-method-selection > div label {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

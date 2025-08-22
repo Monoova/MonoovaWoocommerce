@@ -1,0 +1,32 @@
+{
+  "name": "monoova-payments-for-woocommerce",
+  "version": "1.0.0",
+  "description": "Monoova Payments Gateway for WooCommerce",
+  "scripts": {
+    "build": "wp-scripts build assets/js/src --output-path=assets/js/build",
+    "start": "wp-scripts start assets/js/src --output-path=assets/js/build"
+  },
+  "dependencies": {
+    "@wordpress/data": "^10.26.0",
+    "@wordpress/element": "^6.24.0",
+    "@wordpress/scripts": "^30.7.0",
+    "jquery": "^3.7.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.9",
+    "@babel/runtime": "^7.23.9",
+    "@wordpress/icons": "^10.25.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.10.0",
+    "mini-css-extract-plugin": "^2.8.0",
+    "sass": "^1.71.1",
+    "sass-loader": "^14.1.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
